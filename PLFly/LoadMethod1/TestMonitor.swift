@@ -9,10 +9,10 @@ import UIKit
 
 class TestMonitor: Monitor {
     override class func swiftLoad() {
-        print(#function)
+//        print(#function)
     }
     
     override class func swiftInitialize() {
-        print(#function)
+//        print(#function)
     }
 }

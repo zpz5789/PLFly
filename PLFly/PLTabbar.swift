@@ -11,10 +11,6 @@ import Foundation
 
 class PLTabbar: UITabBar {
     
-    override class func initialize() {
-        
-    }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,5 +19,34 @@ class PLTabbar: UITabBar {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+//NSFontAttributeName
+extension PLTabbar : NSSwiftLoadProtocol {
+    public static func swiftLoad() {
+        print("调用 MYNetworkConfig swiftLoad 方法初始化网络数据成功~~~")
+    }
+    public static func swiftInitialize() {
+        let color = UIColor(hexString: "737787")
+        var attrs = Dictionary<NSAttributedString.Key, Any>()
+        attrs[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 10, weight: .medium)
+        
+        let selectColor = UIColor(hexInt: 0xff6611)
+        var selAttrs = Dictionary<NSAttributedString.Key, Any>()
+        selAttrs[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 10, weight: .medium)
+
+        
+        let tabbarItem = UITabBarItem.appearance();
+        tabbarItem.setTitleTextAttributes(attrs, for: .normal)
+        tabbarItem.setTitleTextAttributes(selAttrs, for: .selected)
+        
+        let tabbar = PLTabbar.appearance()
+        if #available(iOS 13.0, *) {
+            tabbar.unselectedItemTintColor = color
+        }
+        tabbar.isTranslucent = false
+//        tabbar.backgroundImage = 
+
     }
 }

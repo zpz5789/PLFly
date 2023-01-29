@@ -9,10 +9,10 @@ import Foundation
 
 @objcMembers class Monitor: NSObject {
     @objc class func swiftLoad() {
-        print("swift load")
+//        print("swift load")
     }
     
     @objc class func swiftInitialize() {
-        print("swift initialize")
+//        print("swift initialize")
     }
 }

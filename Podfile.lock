@@ -1,0 +1,32 @@
+PODS:
+  - HandyJSON (5.0.2)
+  - JKSwiftExtension (2.2.6)
+  - Kingfisher (7.5.0)
+  - MJRefresh (3.7.5)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - HandyJSON
+  - JKSwiftExtension
+  - Kingfisher
+  - MJRefresh
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - HandyJSON
+    - JKSwiftExtension
+    - Kingfisher
+    - MJRefresh
+    - SnapKit
+
+SPEC CHECKSUMS:
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  JKSwiftExtension: 58479edc1cd1d6a8a25b6043956accd840cfcada
+  Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 97c264d1ca02938d1960efc82db00c6d52caf4ca
+
+COCOAPODS: 1.11.3

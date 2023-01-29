@@ -14,6 +14,7 @@
 		414AB3DF29865C5500A5E119 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AB3DE29865C5500A5E119 /* Monitor.swift */; };
 		414AB3E329865CEC00A5E119 /* Monitor+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 414AB3E229865CEC00A5E119 /* Monitor+Private.m */; };
 		414AB3E5298662FD00A5E119 /* TestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AB3E4298662FD00A5E119 /* TestMonitor.swift */; };
+		414AB3EA29866F3300A5E119 /* NSSwiftLoadProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 414AB3E929866F3300A5E119 /* NSSwiftLoadProtocol.m */; };
 		4195BA78296E8CB900ED842C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA77296E8CB900ED842C /* AppDelegate.swift */; };
 		4195BA7A296E8CB900ED842C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA79296E8CB900ED842C /* SceneDelegate.swift */; };
 		4195BA7C296E8CB900ED842C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA7B296E8CB900ED842C /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		4195BA8C296E905900ED842C /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA8B296E905900ED842C /* MyTabBarController.swift */; };
 		4195BA8E296EAE7B00ED842C /* PLTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA8D296EAE7B00ED842C /* PLTabbar.swift */; };
 		4195BA90296EBDC000ED842C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195BA8F296EBDC000ED842C /* UIColor+Extension.swift */; };
+		5004513CC2204A1F27423E89 /* Pods_PLFly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746D8C6EF608B244F44D1CD6 /* Pods_PLFly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		414AB3E129865CEC00A5E119 /* Monitor+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Monitor+Private.h"; sourceTree = "<group>"; };
 		414AB3E229865CEC00A5E119 /* Monitor+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Monitor+Private.m"; sourceTree = "<group>"; };
 		414AB3E4298662FD00A5E119 /* TestMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMonitor.swift; sourceTree = "<group>"; };
+		414AB3E829866E8700A5E119 /* NSSwiftLoadProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSwiftLoadProtocol.h; sourceTree = "<group>"; };
+		414AB3E929866F3300A5E119 /* NSSwiftLoadProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSwiftLoadProtocol.m; sourceTree = "<group>"; };
 		4195BA74296E8CB900ED842C /* PLFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4195BA77296E8CB900ED842C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4195BA79296E8CB900ED842C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,9 @@
 		4195BA8B296E905900ED842C /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		4195BA8D296EAE7B00ED842C /* PLTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTabbar.swift; sourceTree = "<group>"; };
 		4195BA8F296EBDC000ED842C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		746D8C6EF608B244F44D1CD6 /* Pods_PLFly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PLFly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C552E9FF4FEB620EBE7AB7B9 /* Pods-PLFly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PLFly.release.xcconfig"; path = "Target Support Files/Pods-PLFly/Pods-PLFly.release.xcconfig"; sourceTree = "<group>"; };
+		DDC6297F27B36D6563296F94 /* Pods-PLFly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PLFly.debug.xcconfig"; path = "Target Support Files/Pods-PLFly/Pods-PLFly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5004513CC2204A1F27423E89 /* Pods_PLFly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,11 +99,33 @@
 			path = Mine;
 			sourceTree = "<group>";
 		};
+		414AB3E629866E4400A5E119 /* LoadMethod1 */ = {
+			isa = PBXGroup;
+			children = (
+				414AB3DE29865C5500A5E119 /* Monitor.swift */,
+				414AB3E4298662FD00A5E119 /* TestMonitor.swift */,
+				414AB3E129865CEC00A5E119 /* Monitor+Private.h */,
+				414AB3E229865CEC00A5E119 /* Monitor+Private.m */,
+			);
+			path = LoadMethod1;
+			sourceTree = "<group>";
+		};
+		414AB3E729866E5C00A5E119 /* LoadMethod2 */ = {
+			isa = PBXGroup;
+			children = (
+				414AB3E829866E8700A5E119 /* NSSwiftLoadProtocol.h */,
+				414AB3E929866F3300A5E119 /* NSSwiftLoadProtocol.m */,
+			);
+			path = LoadMethod2;
+			sourceTree = "<group>";
+		};
 		4195BA6B296E8CB900ED842C = {
 			isa = PBXGroup;
 			children = (
 				4195BA76296E8CB900ED842C /* PLFly */,
 				4195BA75296E8CB900ED842C /* Products */,
+				F9EBBB7C837F297F75927FA8 /* Pods */,
+				B9CEA8BA69663ED5AC48A3B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,10 +149,8 @@
 				4195BA7B296E8CB900ED842C /* ViewController.swift */,
 				4195BA8B296E905900ED842C /* MyTabBarController.swift */,
 				4195BA8D296EAE7B00ED842C /* PLTabbar.swift */,
-				414AB3DE29865C5500A5E119 /* Monitor.swift */,
-				414AB3E4298662FD00A5E119 /* TestMonitor.swift */,
-				414AB3E129865CEC00A5E119 /* Monitor+Private.h */,
-				414AB3E229865CEC00A5E119 /* Monitor+Private.m */,
+				414AB3E729866E5C00A5E119 /* LoadMethod2 */,
+				414AB3E629866E4400A5E119 /* LoadMethod1 */,
 				4195BA91296EC9E200ED842C /* UIKitExtension */,
 				4195BA7D296E8CB900ED842C /* Main.storyboard */,
 				4195BA80296E8CB900ED842C /* Assets.xcassets */,
@@ -141,6 +169,24 @@
 			path = UIKitExtension;
 			sourceTree = "<group>";
 		};
+		B9CEA8BA69663ED5AC48A3B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				746D8C6EF608B244F44D1CD6 /* Pods_PLFly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9EBBB7C837F297F75927FA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDC6297F27B36D6563296F94 /* Pods-PLFly.debug.xcconfig */,
+				C552E9FF4FEB620EBE7AB7B9 /* Pods-PLFly.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4195BA88296E8CB900ED842C /* Build configuration list for PBXNativeTarget "PLFly" */;
 			buildPhases = (
+				E91EDDFA08DB3001451A79E0 /* [CP] Check Pods Manifest.lock */,
 				4195BA70296E8CB900ED842C /* Sources */,
 				4195BA71296E8CB900ED842C /* Frameworks */,
 				4195BA72296E8CB900ED842C /* Resources */,
+				B1CFEDFA66D4DE8735906455 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +256,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B1CFEDFA66D4DE8735906455 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PLFly/Pods-PLFly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PLFly/Pods-PLFly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PLFly/Pods-PLFly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91EDDFA08DB3001451A79E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PLFly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4195BA70296E8CB900ED842C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -215,6 +305,7 @@
 			files = (
 				4195BA7C296E8CB900ED842C /* ViewController.swift in Sources */,
 				414AB3DF29865C5500A5E119 /* Monitor.swift in Sources */,
+				414AB3EA29866F3300A5E119 /* NSSwiftLoadProtocol.m in Sources */,
 				4195BA8C296E905900ED842C /* MyTabBarController.swift in Sources */,
 				41126BFD2985115A00D3EF12 /* DeliveryController.swift in Sources */,
 				41126BF92985113900D3EF12 /* HomeController.swift in Sources */,
@@ -367,6 +458,7 @@
 		};
 		4195BA89296E8CB900ED842C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC6297F27B36D6563296F94 /* Pods-PLFly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +490,7 @@
 		};
 		4195BA8A296E8CB900ED842C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C552E9FF4FEB620EBE7AB7B9 /* Pods-PLFly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
