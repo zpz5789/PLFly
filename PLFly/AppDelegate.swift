@@ -14,6 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 2、将字符串转成大写
+//        var tempHex = "0xffffff".uppercased()
+//        // 检查字符串是否拥有特定前缀
+//        // hasPrefix(prefix: String)
+//        // 检查字符串是否拥有特定后缀。
+//        // hasSuffix(suffix: String)
+//        // 3、判断开头： 0x/#/##
+//        if tempHex.hasPrefix("0X") || tempHex.hasPrefix("##") {
+//            let index = tempHex.index(tempHex.startIndex, offsetBy: 2)
+//            tempHex[tempHex.startIndex..<tempHex.endIndex]
+//            let a = tempHex[tempHex.index(tempHex.startIndex, offsetBy: 2)..<tempHex.endIndex]
+//            tempHex = String(tempHex[tempHex.index(tempHex.startIndex, offsetBy: 2)..<tempHex.endIndex])
+//
+//            String(a)
+//        }
+//
+//        print(tempHex)
+        
         return true
     }
 
