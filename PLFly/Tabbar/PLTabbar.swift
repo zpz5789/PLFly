@@ -8,17 +8,24 @@
 
 import UIKit
 import Foundation
+import JKSwiftExtension
 
 class PLTabbar: UITabBar {
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.init(r: 100, g: 100, b: 100)
+        NotificationCenter.default.addObserver(self, selector: #selector(homeTitleAddButtonClicked), name: NSNotification.Name("HomeTitleAddButtonClicked"), object: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+        
+    
+    /// 点击了加号按钮
+    @objc private func homeTitleAddButtonClicked(notification: Notification) {
+        Log.info("dfdsfsfsfsfd")
     }
 }
 
@@ -28,14 +35,15 @@ extension PLTabbar : NSSwiftLoadProtocol {
         print("调用 MYNetworkConfig swiftLoad 方法初始化网络数据成功~~~")
     }
     public static func swiftInitialize() {
-        let color = UIColor(hexString: "737787")
+        let color = UIColor(hexString: "5f5f6b")
         var attrs = Dictionary<NSAttributedString.Key, Any>()
         attrs[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 10, weight: .medium)
+        attrs[NSAttributedString.Key.foregroundColor] = color
         
-        let selectColor = UIColor(hexInt: 0xff6611)
+        let selectColor = UIColor(hexInt: 0x2e73ff)
         var selAttrs = Dictionary<NSAttributedString.Key, Any>()
         selAttrs[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 10, weight: .medium)
-
+        selAttrs[NSAttributedString.Key.foregroundColor] = selectColor
         
         let tabbarItem = UITabBarItem.appearance();
         tabbarItem.setTitleTextAttributes(attrs, for: .normal)
@@ -46,7 +54,6 @@ extension PLTabbar : NSSwiftLoadProtocol {
             tabbar.unselectedItemTintColor = color
         }
         tabbar.isTranslucent = false
-//        tabbar.backgroundImage = 
-
+        tabbar.backgroundImage = UIImage.jk.image(color: UIColor.white)
     }
 }

@@ -10,7 +10,8 @@ target 'PLFly' do
   pod 'Kingfisher'
   pod 'MJRefresh'
   pod 'JKSwiftExtension'
-
+  pod 'Moya'
+  pod 'Log'
   # Pods for PLFly
     
     

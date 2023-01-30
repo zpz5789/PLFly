@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Log
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let Log = Logger()
+
+        Log.trace("Called!!!")
+        Log.debug("Who is self:", self)
+        Log.info("some", "jects", "here")
+        
+        Log.warning("one", "two", "three", separator: " - ")
+//        Log.error(error, terminator: "😱😱😱\n")
+
         // Override point for customization after application launch.
         
         // 2、将字符串转成大写
