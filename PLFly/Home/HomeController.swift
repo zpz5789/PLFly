@@ -6,44 +6,64 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeController: UIViewController {
+    
+    private var topBar: HomeNavBar = HomeNavBar()
+    
+    private lazy var tableView: UITableView = {[weak self] in
+        let tableView = UITableView(frame: CGRectZero, style: .grouped)
+        tableView.backgroundColor = UIColor.lightGray
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.randomColor
+        self.view.backgroundColor = UIColor.white
+        // 设置UI
+        setupUI()
+        
+        Log.info(UIConstant.safeAreaInsets)
+        Log.info(UIConstant.safeAreaInsetsTop)
+        Log.info(UIConstant.statusBarHeight)
+        Log.info(UIConstant.navigionBarHeight)
 
-        /// 通知名
-        let notificationName = "LXNotification"
-        /// 自定义通知
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationAction), name: NSNotification.Name(rawValue: notificationName), object: nil)
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeController {
+    private func setupUI() {
+        self.view.addSubview(topBar)
+        topBar.snp.makeConstraints { make in
+            make.left.right.top.equalTo(0)
+            make.height.equalTo(UIConstant.navigionBarHeight)
+        }
+    }
+}
+
+
+// MARK: - UITableViewDelegate
+extension HomeController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    /// 接受到通知后的方法回调
-    @objc private func notificationAction(noti: Notification) {
-       /// 获取键盘的位置/高度/时间间隔...
-       print(noti)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "LXNotification"), object: "Hello 2017")
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "HomeTitleAddButtonClicked"), object: nil)
-    }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        NotificationCenter.default.post(name: NSNotification.Name("homeTitleAddButtonClicked"), object: nil)
-//    }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

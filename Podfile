@@ -12,6 +12,7 @@ target 'PLFly' do
   pod 'JKSwiftExtension'
   pod 'Moya'
   pod 'Log'
+  pod 'R.swift'
   # Pods for PLFly
     
     

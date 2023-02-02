@@ -9,6 +9,7 @@ PODS:
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - R.swift (7.2.4)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Log
   - MJRefresh
   - Moya
+  - R.swift
   - SnapKit
 
 SPEC REPOS:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - Log
     - MJRefresh
     - Moya
+    - R.swift
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -39,8 +42,9 @@ SPEC CHECKSUMS:
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  R.swift: 681bb9135f482e7a81d9d27445b837fef5467e11
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 5bab45ae3be479df8af581ec7d4897385da7b96b
+PODFILE CHECKSUM: e78e20db53eb8a6cfcd44edd558c04db210e305a
 
 COCOAPODS: 1.11.3
