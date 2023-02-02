@@ -12,9 +12,10 @@ class HomeNavBar: UIView {
     
     private lazy var locationBtn: UIButton = {
         var btn = UIButton()
-        btn.setImage(R.image.downArrow(), for: .normal)
+        btn.setImage(R.image.downArrow_gray(), for: .normal)
         btn.setTitle("深圳", for: .normal)
-        btn.backgroundColor = UIColor.red
+//        btn.backgroundColor = UIColor.red
+        btn.boldFont(15).textColor(UIColor.hexIntColor(hexInt: 0x333333))
         btn.tb.contentLayoutStyle(style: .imageRightTextLeft, space: 10)
         btn.tb.touchExtendInset = UIEdgeInsets(top: -10, left: -10, bottom: -10, right: -50)
         btn.addTarget(self, action: #selector(goLocationCityPick), for: .touchUpInside)
@@ -33,9 +34,8 @@ class HomeNavBar: UIView {
     
     private lazy var searchPlaceView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.green
-        
-        let imageView = UIImageView(image: R.image.downArrow())
+        view.backgroundColor = UIColor.white
+        let imageView = UIImageView(image: R.image.nav_search())
         let textLabel = UILabel().text("搜索我感兴趣的内容")
         view.addSubview(imageView)
         view.addSubview(textLabel)
