@@ -173,7 +173,7 @@ public extension TBPOP where Base: UILabel {
         var lineArr = [String]()
         for line in lines {
             let lineRange = CTLineGetStringRange(line as! CTLine)
-            let lineString = t.jk.sub(start: lineRange.location, length: lineRange.length)
+            let lineString = t.tb.sub(start: lineRange.location, length: lineRange.length)
             lineArr.append(lineString as String)
         }
         return (lineArr.count, lineArr)
@@ -334,13 +334,13 @@ public extension TBPOP where Base: UILabel {
         
         let path = CGMutablePath()
         /// 2.5 是经验误差值
-        path.addRect(CGRect(x: 0, y: 0, width: base.jk.width, height: base.jk.height > (fp * 1.5) ? base.jk.height : fp * 1.5))
+        path.addRect(CGRect(x: 0, y: 0, width: base.tb.width, height: base.tb.height > (fp * 1.5) ? base.tb.height : fp * 1.5))
         let framef = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), path, nil)
         let lines = CTFrameGetLines(framef) as NSArray
         var lineArr = [String]()
         for line in lines {
             let lineRange = CTLineGetStringRange(line as! CTLine)
-            let lineString = t.jk.sub(start: lineRange.location, length: lineRange.length)
+            let lineString = t.tb.sub(start: lineRange.location, length: lineRange.length)
             lineArr.append(lineString as String)
         }
         return (lineArr.count, lineArr)
@@ -369,7 +369,7 @@ public extension TBPOP where Base: UILabel {
     ///   - font: 字体
     ///   - range: 区域
     func setRangeFontText(font: UIFont, range: NSRange) {
-        let attributedString = base.attributedText?.jk.setRangeFontText(font: font, range: range)
+        let attributedString = base.attributedText?.tb.setRangeFontText(font: font, range: range)
         base.attributedText = attributedString
     }
     
@@ -379,7 +379,7 @@ public extension TBPOP where Base: UILabel {
     ///   - text: 特定文字
     ///   - font: 字体
     func setsetSpecificTextFont(_ text: String, font: UIFont) {
-        let attributedString = base.attributedText?.jk.setSpecificTextFont(text, font: font)
+        let attributedString = base.attributedText?.tb.setSpecificTextFont(text, font: font)
         base.attributedText = attributedString
     }
     
@@ -389,7 +389,7 @@ public extension TBPOP where Base: UILabel {
     ///   - color: 字体颜色
     ///   - range: 区域
     func setSpecificRangeTextColor(color: UIColor, range: NSRange) {
-        let attributedString = base.attributedText?.jk.setSpecificRangeTextColor(color: color, range: range)
+        let attributedString = base.attributedText?.tb.setSpecificRangeTextColor(color: color, range: range)
         base.attributedText = attributedString
     }
     
@@ -399,7 +399,7 @@ public extension TBPOP where Base: UILabel {
     ///   - text: 特定文字
     ///   - color: 字体颜色
     func setSpecificTextColor(_ text: String, color: UIColor) {
-        let attributedString = base.attributedText?.jk.setSpecificTextColor(text, color: color)
+        let attributedString = base.attributedText?.tb.setSpecificTextColor(text, color: color)
         base.attributedText = attributedString
     }
     
@@ -407,7 +407,7 @@ public extension TBPOP where Base: UILabel {
     /// 设置行间距
     /// - Parameter space: 行间距
     func setTextLineSpace(_ space: CGFloat) {
-        let attributedString = base.attributedText?.jk.setSpecificRangeTextLineSpace(lineSpace: space, alignment: base.textAlignment, range: NSRange(location: 0, length: base.text?.count ?? 0))
+        let attributedString = base.attributedText?.tb.setSpecificRangeTextLineSpace(lineSpace: space, alignment: base.textAlignment, range: NSRange(location: 0, length: base.text?.count ?? 0))
         base.attributedText = attributedString
     }
     
@@ -418,7 +418,7 @@ public extension TBPOP where Base: UILabel {
     ///   - stytle: 下划线样式，默认单下划线
     ///   - range: 文字区域
     func setSpecificRangeTextUnderLine(color: UIColor, stytle: NSUnderlineStyle = .single, range: NSRange) {
-        let attributedString = base.attributedText?.jk.setSpecificRangeUnderLine(color: color, stytle: stytle, range: range)
+        let attributedString = base.attributedText?.tb.setSpecificRangeUnderLine(color: color, stytle: stytle, range: range)
         base.attributedText = attributedString
     }
     
@@ -429,7 +429,7 @@ public extension TBPOP where Base: UILabel {
     ///   - color: 下划线颜色
     ///   - stytle: 下划线样式，默认单下划线
     func setSpecificTextUnderLine(_ text: String, color: UIColor, stytle: NSUnderlineStyle = .single) {
-        let attributedString = base.attributedText?.jk.setSpecificTextUnderLine(text, color: color, stytle: stytle)
+        let attributedString = base.attributedText?.tb.setSpecificTextUnderLine(text, color: color, stytle: stytle)
         base.attributedText = attributedString
     }
     
@@ -439,7 +439,7 @@ public extension TBPOP where Base: UILabel {
     ///   - color: 删除线颜色
     ///   - range: 特定区域范围
     func setSpecificRangeDeleteLine(color: UIColor, range: NSRange) {
-        let attributedString = base.attributedText?.jk.setSpecificRangeDeleteLine(color: color, range: range)
+        let attributedString = base.attributedText?.tb.setSpecificRangeDeleteLine(color: color, range: range)
         base.attributedText = attributedString
     }
     
@@ -449,7 +449,7 @@ public extension TBPOP where Base: UILabel {
     ///   - text: 特定文字
     ///   - color: 删除线颜色
     func setSpecificTextDeleteLine(_ text: String, color: UIColor) {
-        let attributedString = base.attributedText?.jk.setSpecificTextDeleteLine(text, color: color)
+        let attributedString = base.attributedText?.tb.setSpecificTextDeleteLine(text, color: color)
         base.attributedText = attributedString
     }
     
@@ -462,7 +462,7 @@ public extension TBPOP where Base: UILabel {
     func insertImage(imgName: String, imgBounds: CGRect = .zero, imgIndex: Int = 0) {
         // 设置换行方式
         base.lineBreakMode = NSLineBreakMode.byCharWrapping
-        let attributedString = base.attributedText?.jk.insertImage(imgName: imgName, imgBounds: imgBounds, imgIndex: imgIndex)
+        let attributedString = base.attributedText?.tb.insertImage(imgName: imgName, imgBounds: imgBounds, imgIndex: imgIndex)
         base.attributedText = attributedString
     }
     
@@ -470,7 +470,7 @@ public extension TBPOP where Base: UILabel {
     /// 首行缩进
     /// - Parameter edge: 缩进宽度
     func firstLineLeftEdge(_ edge: CGFloat) {
-        let attributedString = base.attributedText?.jk.firstLineLeftEdge(edge)
+        let attributedString = base.attributedText?.tb.firstLineLeftEdge(edge)
         base.attributedText = attributedString
     }
     
@@ -480,7 +480,7 @@ public extension TBPOP where Base: UILabel {
     ///   - inclination: 倾斜度
     ///   - range: 文字区域
     func setSpecificRangeBliqueness(inclination: Float = 0, range: NSRange) {
-        let attributedString = base.attributedText?.jk.setSpecificRangeBliqueness(inclination: inclination, range: range)
+        let attributedString = base.attributedText?.tb.setSpecificRangeBliqueness(inclination: inclination, range: range)
         base.attributedText = attributedString
     }
     
@@ -490,7 +490,7 @@ public extension TBPOP where Base: UILabel {
     ///   - text: 特定文字
     ///   - inclination: 倾斜度
     func setSpecificTextBliqueness(_ text: String, inclination: Float = 0) {
-        let attributedString = base.attributedText?.jk.setSpecificTextBliqueness(text, inclination: inclination)
+        let attributedString = base.attributedText?.tb.setSpecificTextBliqueness(text, inclination: inclination)
         base.attributedText = attributedString
 
     }

@@ -25,7 +25,7 @@ class PLTabbar: UITabBar {
     
     /// 点击了加号按钮
     @objc private func homeTitleAddButtonClicked(notification: Notification) {
-        Log.info("dfdsfsfsfsfd")
+        TBPrint("dfdsfsfsfsfd")
     }
 }
 

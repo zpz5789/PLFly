@@ -156,7 +156,7 @@ public extension UIColor {
 //        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
 //            return (nil, nil, nil, nil)
 //        }
-//        return ("\(Int(red * multiplier))".jk.toCGFloat(), "\(Int(green * multiplier))".jk.toCGFloat(), "\(Int(blue * multiplier))".jk.toCGFloat(), alpha)
+//        return ("\(Int(red * multiplier))".tb.toCGFloat(), "\(Int(green * multiplier))".tb.toCGFloat(), "\(Int(blue * multiplier))".tb.toCGFloat(), alpha)
 //    }
 }
 
@@ -292,21 +292,21 @@ extension UIColor {
     // MARK: 背景灰色
     /// 背景灰色
     /// - Returns: 背景灰色
-    static func JKGlobalColor() -> UIColor {
+    static func TBGlobalColor() -> UIColor {
         return color(r: 240, g: 240, b: 240, alpha: 1)
     }
     
     // MARK: 红色
     /// 红色
     /// - Returns: 红色
-    static func JKGlobalRedColor() -> UIColor {
+    static func TBGlobalRedColor() -> UIColor {
         return color(r: 245, g: 80, b: 83, alpha: 1.0)
     }
     
     // MARK: 字体的灰色
     /// 字体的灰色
     /// - Returns: 字体的灰色
-    static func JKTextGayColor() -> UIColor {
+    static func TBTextGayColor() -> UIColor {
         return color(r: 140, g: 140, b: 140, alpha: 1.0)
     }
 }

@@ -28,11 +28,15 @@ class HomeController: UIViewController {
         // 设置UI
         setupUI()
         
-        Log.info(UIConstant.safeAreaInsets)
-        Log.info(UIConstant.safeAreaInsetsTop)
-        Log.info(UIConstant.statusBarHeight)
-        Log.info(UIConstant.navigionBarHeight)
+        TBPrint(UIConstant.safeAreaInsets)
+        TBPrint(UIConstant.safeAreaInsetsTop)
+        TBPrint(UIConstant.statusBarHeight)
+        TBPrint(UIConstant.navigionBarHeight)
 
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.jk.shake()
     }
 }
 
@@ -44,6 +48,20 @@ extension HomeController {
             make.left.right.top.equalTo(0)
             make.height.equalTo(UIConstant.navigionBarHeight)
         }
+        
+        let btn = UIButton.jk.small(type: .red, height: 50).addTo(self.view)
+        btn.snp.makeConstraints { make in
+            make.top.equalTo(topBar.snp.bottom)
+            make.left.equalTo(0)
+        }
+        
+        let btn1 = UIButton.jk.normal().addTo(self.view)
+        btn1.snp.makeConstraints { make in
+            make.top.equalTo(btn.snp.bottom)
+            make.left.equalTo(0)
+        }
+
+        
     }
 }
 
