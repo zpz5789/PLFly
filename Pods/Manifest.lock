@@ -3,7 +3,6 @@ PODS:
   - HandyJSON (5.0.2)
   - JKSwiftExtension (2.2.6)
   - Kingfisher (7.5.0)
-  - Log (2.0)
   - MJRefresh (3.7.5)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
@@ -16,7 +15,6 @@ DEPENDENCIES:
   - HandyJSON
   - JKSwiftExtension
   - Kingfisher
-  - Log
   - MJRefresh
   - Moya
   - R.swift
@@ -28,7 +26,6 @@ SPEC REPOS:
     - HandyJSON
     - JKSwiftExtension
     - Kingfisher
-    - Log
     - MJRefresh
     - Moya
     - R.swift
@@ -39,12 +36,11 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   JKSwiftExtension: 58479edc1cd1d6a8a25b6043956accd840cfcada
   Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
-  Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   R.swift: 681bb9135f482e7a81d9d27445b837fef5467e11
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: e78e20db53eb8a6cfcd44edd558c04db210e305a
+PODFILE CHECKSUM: e867214ee7dd17a7b93f6c79b4a74c1d70893f11
 
 COCOAPODS: 1.11.3
