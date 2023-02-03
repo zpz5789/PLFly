@@ -20,11 +20,12 @@ class HomeController: UIViewController {
         return tableView
     }()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = R.color.text333()
+        self.view.backgroundColor = R.color.text666()
+        self.view.backgroundColor = R.color.text999()
+
         // 设置UI
         setupUI()
         
@@ -33,10 +34,10 @@ class HomeController: UIViewController {
         TBPrint(UIConstant.statusBarHeight)
         TBPrint(UIConstant.navigionBarHeight)
 
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.jk.shake()
+        self.view.tb.addGestureTap { tap in
+            TBPrint("sdfsf")
+        }
+
     }
 }
 
@@ -60,8 +61,6 @@ extension HomeController {
             make.top.equalTo(btn.snp.bottom)
             make.left.equalTo(0)
         }
-
-        
     }
 }
 

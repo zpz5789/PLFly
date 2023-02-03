@@ -49,12 +49,24 @@ struct _R {
     var zqtAppDelegateRootViewController: RswiftResources.DataResource { .init(name: "ZQTAppDelegate+RootViewController", path: [], bundle: bundle, onDemandResourceTags: nil) }
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 1 colors.
+  /// This `_R.color` struct is generated, and contains static references to 5 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+    /// Color `Primary`.
+    var primary: RswiftResources.ColorResource { .init(name: "Primary", path: [], bundle: bundle) }
+
+    /// Color `Text333`.
+    var text333: RswiftResources.ColorResource { .init(name: "Text333", path: [], bundle: bundle) }
+
+    /// Color `Text666`.
+    var text666: RswiftResources.ColorResource { .init(name: "Text666", path: [], bundle: bundle) }
+
+    /// Color `Text999`.
+    var text999: RswiftResources.ColorResource { .init(name: "Text999", path: [], bundle: bundle) }
   }
 
   /// This `_R.image` struct is generated, and contains static references to 328 images.

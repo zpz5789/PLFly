@@ -18,7 +18,6 @@ class HomeNavBar: UIView {
         btn.boldFont(15).textColor(UIColor.hexIntColor(hexInt: 0x333333))
         btn.tb.touchExtendInset = UIEdgeInsets(top: -10, left: -10, bottom: -10, right: -50)
         btn.addTarget(self, action: #selector(goLocationCityPick), for: .touchUpInside)
-//        btn.jk.preventDoubleHit(2)
         return btn
     }()
     
@@ -27,7 +26,6 @@ class HomeNavBar: UIView {
         btn.setImage(UIImage(named: "downArrow"), for: .normal)
         btn.backgroundColor = UIColor.red
         btn.addTarget(self, action: #selector(goScanQRcode), for: .touchUpInside)
-//        btn.jk.preventDoubleHit(2)
         return btn
     }()
     
@@ -52,7 +50,7 @@ class HomeNavBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.lightGray
+        self.backgroundColor = Theme.blue
         setupSubViews()
     }
     
@@ -83,7 +81,6 @@ class HomeNavBar: UIView {
         }
         locationBtn.setContentHuggingPriority(UILayoutPriority.required, for: .horizontal)
         searchPlaceView.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
-        
     }
     
     @objc private func goLocationCityPick() {
