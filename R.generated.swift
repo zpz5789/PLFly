@@ -69,7 +69,7 @@ struct _R {
     var text999: RswiftResources.ColorResource { .init(name: "Text999", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 328 images.
+  /// This `_R.image` struct is generated, and contains static references to 347 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -117,6 +117,15 @@ struct _R {
 
     /// Image `attach_resume_upload`.
     var attach_resume_upload: RswiftResources.ImageResource { .init(name: "attach_resume_upload", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `banner1`.
+    var banner1: RswiftResources.ImageResource { .init(name: "banner1", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `banner2`.
+    var banner2: RswiftResources.ImageResource { .init(name: "banner2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `banner3`.
+    var banner3: RswiftResources.ImageResource { .init(name: "banner3", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `banner_390`.
     var banner_390: RswiftResources.ImageResource { .init(name: "banner_390", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -222,6 +231,54 @@ struct _R {
 
     /// Image `downloading_running`.
     var downloading_running: RswiftResources.ImageResource { .init(name: "downloading_running", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_00`.
+    var dropdown_loading_00: RswiftResources.ImageResource { .init(name: "dropdown_loading_00", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_01`.
+    var dropdown_loading_01: RswiftResources.ImageResource { .init(name: "dropdown_loading_01", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_010`.
+    var dropdown_loading_010: RswiftResources.ImageResource { .init(name: "dropdown_loading_010", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_011`.
+    var dropdown_loading_011: RswiftResources.ImageResource { .init(name: "dropdown_loading_011", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_012`.
+    var dropdown_loading_012: RswiftResources.ImageResource { .init(name: "dropdown_loading_012", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_013`.
+    var dropdown_loading_013: RswiftResources.ImageResource { .init(name: "dropdown_loading_013", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_014`.
+    var dropdown_loading_014: RswiftResources.ImageResource { .init(name: "dropdown_loading_014", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_015`.
+    var dropdown_loading_015: RswiftResources.ImageResource { .init(name: "dropdown_loading_015", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_02`.
+    var dropdown_loading_02: RswiftResources.ImageResource { .init(name: "dropdown_loading_02", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_03`.
+    var dropdown_loading_03: RswiftResources.ImageResource { .init(name: "dropdown_loading_03", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_04`.
+    var dropdown_loading_04: RswiftResources.ImageResource { .init(name: "dropdown_loading_04", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_05`.
+    var dropdown_loading_05: RswiftResources.ImageResource { .init(name: "dropdown_loading_05", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_06`.
+    var dropdown_loading_06: RswiftResources.ImageResource { .init(name: "dropdown_loading_06", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_07`.
+    var dropdown_loading_07: RswiftResources.ImageResource { .init(name: "dropdown_loading_07", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_08`.
+    var dropdown_loading_08: RswiftResources.ImageResource { .init(name: "dropdown_loading_08", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `dropdown_loading_09`.
+    var dropdown_loading_09: RswiftResources.ImageResource { .init(name: "dropdown_loading_09", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `emitter_blue`.
     var emitter_blue: RswiftResources.ImageResource { .init(name: "emitter_blue", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }

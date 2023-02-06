@@ -23,9 +23,12 @@ class MyTabBarController: UITabBarController {
         let tabbar = PLTabbar.init()
         
         self.setValue(tabbar, forKey: "tabBar")
-  
-        addChildViewControllers(HomeController.init(), title: "首页", imageName: "home")
-        addChildViewControllers(StudyController.init(), title: "学习", imageName: "xuexi")
+        let homeNav = UINavigationController.init(rootViewController: HomeController.init())
+        
+        let studyNav = UINavigationController.init(rootViewController: StudyController.init())
+
+        addChildViewControllers(homeNav, title: "首页", imageName: "home")
+        addChildViewControllers(studyNav, title: "学习", imageName: "xuexi")
         addChildViewControllers(DeliveryController.init(), title: "投递", imageName: "toudi")
         addChildViewControllers(MineController.init(), title: "我的", imageName: "mine")
         

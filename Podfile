@@ -5,13 +5,16 @@ target 'PLFly' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'HandyJSON'
   pod 'SnapKit'
   pod 'Kingfisher'
   pod 'MJRefresh'
   pod 'JKSwiftExtension'
   pod 'Moya'
   pod 'R.swift'
+  pod 'FSPagerView'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper'
+
   # Pods for PLFly
     
     

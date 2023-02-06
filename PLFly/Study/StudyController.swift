@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JKSwiftExtension
 
 class StudyController: UIViewController {
 
@@ -13,7 +14,21 @@ class StudyController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.randomColor
 
-        // Do any additional setup after loading the view.
+        let image = UIImage.tb.image(color: UIColor.randomColor, size: CGSize(width: jk_kScreenW, height: 200))
+        
+//        let imageView = UIImageView.init(image: image)
+//        self.view.addSubview(imageView)
+        
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            appearance.backgroundImage = image
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+        }else{
+            self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+        }
+
     }
     
 

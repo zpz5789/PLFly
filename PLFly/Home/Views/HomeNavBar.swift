@@ -50,7 +50,6 @@ class HomeNavBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = Theme.blue
         setupSubViews()
     }
     

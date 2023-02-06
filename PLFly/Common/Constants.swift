@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-struct UIConstant {
+struct TB {
     /// 状态栏高度
     public static let statusBarHeight: CGFloat = getStatusBarHeight()
 
@@ -35,7 +35,7 @@ struct UIConstant {
     public static let separatorHeight: CGFloat = 1.0 / UIScreen.main.scale
 }
 
-extension UIConstant {
+extension TB {
     private static func getStatusBarHeight() -> CGFloat {
         if #available(iOS 13.0, *) {
             return UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.size.height ?? 0
@@ -51,5 +51,32 @@ extension UIConstant {
         } else {
             return (0, 0)
         }
+    }
+}
+
+extension TB {
+    struct Color {
+        /// 主题蓝
+        public static let themeBlue: UIColor = UIColor.hexStringColor(hexString: "#2e73ff")
+        ///  文本333
+        public static let text333: UIColor = UIColor.hexStringColor(hexString: "#333333")
+        ///  文本666
+        public static let text666: UIColor = UIColor.hexStringColor(hexString: "#333333")
+        ///  文本999
+        public static let text999: UIColor = UIColor.hexStringColor(hexString: "#333333")
+    }
+
+    struct Font {
+        /// tabViewSectionTitle 文本
+        public static let tabViewSectionTitle: UIFont = UIFont.systemFont(ofSize: 16)
+        /// tabViewSectionJump 文本
+        public static let tabViewSectionJump: UIFont = UIFont.systemFont(ofSize: 13)
+    }
+    
+    struct Layout {
+        public static let sectionMargin: CGFloat = 10.0
+        public static let marginLeft: CGFloat = 13.0
+        public static let marginRight: CGFloat = -13.0
+
     }
 }
