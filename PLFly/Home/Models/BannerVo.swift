@@ -25,7 +25,7 @@ class BannerVo: Mappable {
     }
     
     var id: String = ""
-    var imagesUrl: String?
+    var imagesUrl: String = ""
     var title: String?
     var contentType: Int = 0
     var contentId: String?

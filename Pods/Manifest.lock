@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
+  - ESPullToRefresh (2.9.3)
+  - ESTabBarController-swift (2.8.0)
   - FSPagerView (0.8.3)
   - JKSwiftExtension (2.2.6)
   - Kingfisher (7.5.0)
@@ -14,6 +16,8 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - ESPullToRefresh
+  - ESTabBarController-swift
   - FSPagerView
   - JKSwiftExtension
   - Kingfisher
@@ -27,6 +31,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ESPullToRefresh
+    - ESTabBarController-swift
     - FSPagerView
     - JKSwiftExtension
     - Kingfisher
@@ -39,6 +45,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  ESPullToRefresh: 0d68daa602b343c81753a1b95e09fd0bfcddfd40
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   JKSwiftExtension: 58479edc1cd1d6a8a25b6043956accd840cfcada
   Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
@@ -49,6 +57,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 747fab209608da04fb77e884468b21803d3e17f6
+PODFILE CHECKSUM: 86429e029c8959f26c1dda7f0fb2d1ccb9613ec9
 
 COCOAPODS: 1.11.3

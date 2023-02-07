@@ -14,6 +14,9 @@ target 'PLFly' do
   pod 'FSPagerView'
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
+  pod 'FSPagerView'
+  pod "ESPullToRefresh"
+  pod "ESTabBarController-swift"
 
   # Pods for PLFly
     

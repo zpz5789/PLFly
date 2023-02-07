@@ -16,6 +16,8 @@ class HomeController: UIViewController {
     
     private var topBar: HomeNavBar = HomeNavBar()
     
+    private var tabHeader: HomeTabHeader = HomeTabHeader(frame: CGRect(x: 0, y: 0, width: TB.screenWidth, height: 350))
+    
     private var homeIndex: HomeIndex?
     
     private var jobDataSource: [Any] = Array()
@@ -28,7 +30,7 @@ class HomeController: UIViewController {
         tableView.tb.tableViewNeverAdjustContentInset()
         tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self!, refreshingAction: #selector(headerRefresh))
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self!, refreshingAction: #selector(footerRefresh))
-        tableView.tableHeaderView(HomeTabHeader(frame: CGRect(x: 0, y: 0, width: TB.screenWidth, height: 350)))
+        tableView.tableHeaderView(tabHeader)
         tableView.tb.register(cellClass: HomeAdCell.self)
         tableView.tb.register(cellClass: CourseCell.self)
         tableView.tb.register(cellClass: PositionCell.self)
@@ -66,6 +68,7 @@ extension HomeController {
         NetWorkRequest(APIHome.newIndex(parameters: ["sctName":"深圳", "userId":"291952", "ctName":"深圳"]), modelType: HomeIndex.self) { homeIndex, _ in
             self.homeIndex = homeIndex
             self.tableView.reloadData()
+            self.tabHeader.bannerDataSource = self.homeIndex?.appBannerVos ?? []
         }
         
         NetWorkRequest(APIHome.job(parameters: ["sctName":"深圳", "userId":"291952", "ctName":"深圳", "currentPage":1, "pageSize": 10]), modelType: [Job].self, tagetMapKey: "jobs") { jobs, _ in
