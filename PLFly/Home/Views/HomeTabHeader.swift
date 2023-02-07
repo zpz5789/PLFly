@@ -11,7 +11,7 @@ class HomeTabHeader: UIView {
     
     /// banner区
     private lazy var bannerView: UIView = {
-        let banner = UIImageView(frame: CGRect(x: 0, y: 0, width: TB.screenWidth, height:  250))
+        let banner = UIImageView(frame: CGRect(x: 0, y: 0, width: TB.screenWidth, height: 250))
         banner.image = UIImage.init(named: "banner2")
         return banner
     }()

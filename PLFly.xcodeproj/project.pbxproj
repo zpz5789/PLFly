@@ -37,6 +37,17 @@
 		417689FC298E1FBB00091776 /* HomeTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417689FB298E1FBB00091776 /* HomeTabHeader.swift */; };
 		417689FE298E617500091776 /* UIStackView+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417689FD298E617500091776 /* UIStackView+TBExtention.swift */; };
 		41768A00298E65D500091776 /* HomeTabSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417689FF298E65D500091776 /* HomeTabSectionHeader.swift */; };
+		41768A032990D93200091776 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A022990D93200091776 /* NetworkManager.swift */; };
+		41768A052990DAD500091776 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A042990DAD500091776 /* API.swift */; };
+		41768A082991EB8A00091776 /* HomeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A072991EB8A00091776 /* HomeIndex.swift */; };
+		41768A0A2991EC0D00091776 /* BannerVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A092991EC0D00091776 /* BannerVo.swift */; };
+		41768A0C2991F8D300091776 /* ApkVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A0B2991F8D300091776 /* ApkVersion.swift */; };
+		41768A0E2991F9CA00091776 /* AppLineCourseBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A0D2991F9CA00091776 /* AppLineCourseBanner.swift */; };
+		41768A102991FB0500091776 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A0F2991FB0500091776 /* Course.swift */; };
+		41768A122992002700091776 /* HomeAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A112992002700091776 /* HomeAdCell.swift */; };
+		41768A142992250E00091776 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A132992250E00091776 /* CourseCell.swift */; };
+		41768A16299227AC00091776 /* UIFont+TBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A15299227AC00091776 /* UIFont+TBExtension.swift */; };
+		41768A1829922C5100091776 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1729922C5100091776 /* PositionCell.swift */; };
 		417AB0A62987C0500004B4E6 /* TBPOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A52987C0500004B4E6 /* TBPOP.swift */; };
 		417AB0A9298A41310004B4E6 /* HomeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A8298A41310004B4E6 /* HomeNavBar.swift */; };
 		417AB0AD298A47F50004B4E6 /* UIButton+PAITAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0AC298A47F50004B4E6 /* UIButton+PAITAdd.m */; };
@@ -103,6 +114,17 @@
 		417689FB298E1FBB00091776 /* HomeTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabHeader.swift; sourceTree = "<group>"; };
 		417689FD298E617500091776 /* UIStackView+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+TBExtention.swift"; sourceTree = "<group>"; };
 		417689FF298E65D500091776 /* HomeTabSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabSectionHeader.swift; sourceTree = "<group>"; };
+		41768A022990D93200091776 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		41768A042990DAD500091776 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		41768A072991EB8A00091776 /* HomeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndex.swift; sourceTree = "<group>"; };
+		41768A092991EC0D00091776 /* BannerVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerVo.swift; sourceTree = "<group>"; };
+		41768A0B2991F8D300091776 /* ApkVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApkVersion.swift; sourceTree = "<group>"; };
+		41768A0D2991F9CA00091776 /* AppLineCourseBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLineCourseBanner.swift; sourceTree = "<group>"; };
+		41768A0F2991FB0500091776 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		41768A112992002700091776 /* HomeAdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAdCell.swift; sourceTree = "<group>"; };
+		41768A132992250E00091776 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		41768A15299227AC00091776 /* UIFont+TBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+TBExtension.swift"; sourceTree = "<group>"; };
+		41768A1729922C5100091776 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		417AB0A52987C0500004B4E6 /* TBPOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPOP.swift; sourceTree = "<group>"; };
 		417AB0A8298A41310004B4E6 /* HomeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBar.swift; sourceTree = "<group>"; };
 		417AB0AB298A47F50004B4E6 /* UIButton+PAITAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+PAITAdd.h"; sourceTree = "<group>"; };
@@ -155,6 +177,7 @@
 		41126BF3298510D200D3EF12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				41768A062991EB7400091776 /* Models */,
 				417AB0A7298A41230004B4E6 /* Views */,
 				41126BF82985113900D3EF12 /* HomeController.swift */,
 			);
@@ -215,6 +238,27 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		41768A012990D8BB00091776 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				41768A022990D93200091776 /* NetworkManager.swift */,
+				41768A042990DAD500091776 /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		41768A062991EB7400091776 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41768A072991EB8A00091776 /* HomeIndex.swift */,
+				41768A092991EC0D00091776 /* BannerVo.swift */,
+				41768A0B2991F8D300091776 /* ApkVersion.swift */,
+				41768A0D2991F9CA00091776 /* AppLineCourseBanner.swift */,
+				41768A0F2991FB0500091776 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		417AB0A42987C0070004B4E6 /* Zpz */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +293,7 @@
 				41C3F8E2298CFA50008A5804 /* UITableView+TBExtention.swift */,
 				41C3F8E4298CFA5F008A5804 /* UICollectionView+TBExtionsion.swift */,
 				417689FD298E617500091776 /* UIStackView+TBExtention.swift */,
+				41768A15299227AC00091776 /* UIFont+TBExtension.swift */,
 			);
 			path = Zpz;
 			sourceTree = "<group>";
@@ -259,6 +304,9 @@
 				417AB0A8298A41310004B4E6 /* HomeNavBar.swift */,
 				417689FB298E1FBB00091776 /* HomeTabHeader.swift */,
 				417689FF298E65D500091776 /* HomeTabSectionHeader.swift */,
+				41768A112992002700091776 /* HomeAdCell.swift */,
+				41768A132992250E00091776 /* CourseCell.swift */,
+				41768A1729922C5100091776 /* PositionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +341,7 @@
 		4195BA76296E8CB900ED842C /* PLFly */ = {
 			isa = PBXGroup;
 			children = (
+				41768A012990D8BB00091776 /* Network */,
 				417689F4298D12E900091776 /* Utils */,
 				417AB0AA298A47E10004B4E6 /* categorys */,
 				417AB0A42987C0070004B4E6 /* Zpz */,
@@ -499,9 +548,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41768A032990D93200091776 /* NetworkManager.swift in Sources */,
 				417645D4298BCDF300F8F2A9 /* UIControl+TBExtention.swift in Sources */,
 				4195BA7C296E8CB900ED842C /* ViewController.swift in Sources */,
 				417645DA298CA7BC00F8F2A9 /* UIAlertController+TBExtention.swift in Sources */,
+				41768A142992250E00091776 /* CourseCell.swift in Sources */,
+				41768A0E2991F9CA00091776 /* AppLineCourseBanner.swift in Sources */,
 				417645CC298BC78400F8F2A9 /* UIVisualEffectView+TBExtension.swift in Sources */,
 				414AB3DF29865C5500A5E119 /* Monitor.swift in Sources */,
 				417645BC298BC04B00F8F2A9 /* Data+TBExtention.swift in Sources */,
@@ -512,6 +564,7 @@
 				4195BA8C296E905900ED842C /* MyTabBarController.swift in Sources */,
 				41768A00298E65D500091776 /* HomeTabSectionHeader.swift in Sources */,
 				41126BFD2985115A00D3EF12 /* DeliveryController.swift in Sources */,
+				41768A052990DAD500091776 /* API.swift in Sources */,
 				417645BE298BC0A100F8F2A9 /* DateFormatter+TBExtension.swift in Sources */,
 				41C3F8E1298CF5E1008A5804 /* UITextField+TBExtension.swift in Sources */,
 				41126BF92985113900D3EF12 /* HomeController.swift in Sources */,
@@ -521,21 +574,27 @@
 				417645C2298BC39900F8F2A9 /* TBRegexHelper.swift in Sources */,
 				417AB0AF298A49CE0004B4E6 /* TBTheme.swift in Sources */,
 				417AB0BA298B8D7E0004B4E6 /* UILabel+TBExtention.swift in Sources */,
+				41768A122992002700091776 /* HomeAdCell.swift in Sources */,
 				417AB0A62987C0500004B4E6 /* TBPOP.swift in Sources */,
 				41C3F8E5298CFA5F008A5804 /* UICollectionView+TBExtionsion.swift in Sources */,
 				417AB0B1298A5A040004B4E6 /* AppUtil.swift in Sources */,
 				417AB0B8298B57040004B4E6 /* R.generated.swift in Sources */,
+				41768A102991FB0500091776 /* Course.swift in Sources */,
 				417645D6298BCE4B00F8F2A9 /* TBAsyncs.swift in Sources */,
 				417689F8298D134C00091776 /* PLRefreshFooter.swift in Sources */,
+				41768A16299227AC00091776 /* UIFont+TBExtension.swift in Sources */,
 				417689F6298D133700091776 /* PLRefreshHeader.swift in Sources */,
 				4187F223298BBC9100BD4C38 /* TBPrint.swift in Sources */,
 				417AB0BC298B924F0004B4E6 /* UIView+TBExtention.swift in Sources */,
+				41768A082991EB8A00091776 /* HomeIndex.swift in Sources */,
 				417645D0298BCA8E00F8F2A9 /* NSAttributedString+TBExtension.swift in Sources */,
 				4195BA8E296EAE7B00ED842C /* PLTabbar.swift in Sources */,
 				417645C8298BC65700F8F2A9 /* Double+TBExtionsion.swift in Sources */,
 				41C3F8DD298CEC0E008A5804 /* UIImageView+TBExtention.swift in Sources */,
 				417645D8298BD07C00F8F2A9 /* FileManager+TBExtention.swift in Sources */,
 				417AB0C0298BB5280004B4E6 /* CAGradientLayer+TBExtension.swift in Sources */,
+				41768A0A2991EC0D00091776 /* BannerVo.swift in Sources */,
+				41768A0C2991F8D300091776 /* ApkVersion.swift in Sources */,
 				414AB3E5298662FD00A5E119 /* TestMonitor.swift in Sources */,
 				417AB0A9298A41310004B4E6 /* HomeNavBar.swift in Sources */,
 				4195BA90296EBDC000ED842C /* UIColor+TBExtension.swift in Sources */,
@@ -548,6 +607,7 @@
 				4187F221298BBBC900BD4C38 /* TBRuntime.swift in Sources */,
 				417689FC298E1FBB00091776 /* HomeTabHeader.swift in Sources */,
 				41C8CF1929879DC200A0E3F2 /* Constants.swift in Sources */,
+				41768A1829922C5100091776 /* PositionCell.swift in Sources */,
 				414AB3E329865CEC00A5E119 /* Monitor+Private.m in Sources */,
 				417645D2298BCAF200F8F2A9 /* UIDevice+TBExtension.swift in Sources */,
 				4195BA7A296E8CB900ED842C /* SceneDelegate.swift in Sources */,

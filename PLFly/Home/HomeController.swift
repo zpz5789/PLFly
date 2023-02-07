@@ -9,20 +9,29 @@ import UIKit
 import SnapKit
 import JKSwiftExtension
 import MJRefresh
+import Moya
+import Alamofire
 
 class HomeController: UIViewController {
     
     private var topBar: HomeNavBar = HomeNavBar()
     
+    private var homeIndex: HomeIndex?
+    
+    private var jobDataSource: [Any] = Array()
+    
     private lazy var tableView: UITableView = {[weak self] in
         let tableView = UITableView(frame: CGRectZero, style: .plain)
-//        tableView.backgroundColor = UIColor.lightGray
+        //        tableView.backgroundColor = UIColor.lightGray
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tb.tableViewNeverAdjustContentInset()
         tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self!, refreshingAction: #selector(headerRefresh))
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self!, refreshingAction: #selector(footerRefresh))
         tableView.tableHeaderView(HomeTabHeader(frame: CGRect(x: 0, y: 0, width: TB.screenWidth, height: 350)))
+        tableView.tb.register(cellClass: HomeAdCell.self)
+        tableView.tb.register(cellClass: CourseCell.self)
+        tableView.tb.register(cellClass: PositionCell.self)
         return tableView
     }()
     override func viewDidLoad() {
@@ -30,6 +39,9 @@ class HomeController: UIViewController {
         self.navigationController?.navigationBar.isHidden(true)
         // 设置UI
         setupUI()
+        
+        // 网络请求
+        request()
     }
 }
 
@@ -47,6 +59,13 @@ extension HomeController {
             make.height.equalTo(TB.navigionBarHeight)
         }
         
+    }
+    
+    private func request() {
+        NetWorkRequest(APIHome.newIndex(parameters: ["sctName":"深圳", "userId":"291952", "ctName":"深圳"]), modelType: HomeIndex.self) { homeIndex, _ in
+            self.homeIndex = homeIndex
+            self.tableView.reloadData()
+        }
     }
     
     @objc private func footerRefresh() {
@@ -81,15 +100,33 @@ extension HomeController: UITableViewDelegate {
 // MARK: - UITableViewDataSource
 extension HomeController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        if homeIndex != nil {
+            return 2
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if section == 0 {
+            return self.homeIndex!.courseList!.count + 1
+        } else {
+            return jobDataSource.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                let adCell = tableView.tb.dequeueReusableCell(cellType: HomeAdCell.self, cellForRowAt: indexPath)
+                return adCell
+            } else {
+                let courseCell = tableView.tb.dequeueReusableCell(cellType: CourseCell.self, cellForRowAt: indexPath)
+                return courseCell
+            }
+        } else {
+//            let adCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(HomeAdCell.self))
+            return UITableViewCell()
+        }
     }
     
     
