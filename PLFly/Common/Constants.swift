@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+public let TBImageBaseURL: String = "http://static.zhiqiantong.com"
 
 struct TB {
     /// 状态栏高度
@@ -77,6 +78,5 @@ extension TB {
         public static let sectionMargin: CGFloat = 10.0
         public static let marginLeft: CGFloat = 13.0
         public static let marginRight: CGFloat = -13.0
-
     }
 }

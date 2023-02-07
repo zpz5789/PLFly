@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeAdCell: UITableViewCell {
 
@@ -16,7 +17,6 @@ class HomeAdCell: UITableViewCell {
         self.contentView.backgroundColor = UIColor.white
         self.selectionStyle = .none
         let left = UIImageView(image: R.image.homeactivePlaceHolder())
-
         let right = UIImageView(image: R.image.homeactivePlaceHolder())
         imageViewArr = [left, right]
         self.contentView.tb.addSubviews(imageViewArr!)
@@ -60,5 +60,15 @@ class HomeAdCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+}
 
+extension HomeAdCell {
+    public func setAppLineCourseBannerList(list: [AppLineCourseBanner]) {
+        if list.count >= 2 {
+            let leftImageString = TBImageBaseURL + list[0].imagesUrl
+            let rightImageString = TBImageBaseURL + list[1].imagesUrl
+            imageViewArr?[0].kf.setImage(with: URL(string: leftImageString), placeholder: R.image.homeactivePlaceHolder())
+            imageViewArr?[1].kf.setImage(with: URL(string: rightImageString), placeholder: R.image.homeactivePlaceHolder())
+        }
+    }
 }

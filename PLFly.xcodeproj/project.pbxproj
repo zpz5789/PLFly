@@ -48,6 +48,10 @@
 		41768A142992250E00091776 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A132992250E00091776 /* CourseCell.swift */; };
 		41768A16299227AC00091776 /* UIFont+TBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A15299227AC00091776 /* UIFont+TBExtension.swift */; };
 		41768A1829922C5100091776 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1729922C5100091776 /* PositionCell.swift */; };
+		41768A1A299238F400091776 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A19299238F400091776 /* Job.swift */; };
+		41768A1C299255E000091776 /* Int+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1B299255E000091776 /* Int+TBExtention.swift */; };
+		41768A1E299255EE00091776 /* Float+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1D299255EE00091776 /* Float+TBExtention.swift */; };
+		41768A202992569800091776 /* NSDecimalNumberHandler+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1F2992569800091776 /* NSDecimalNumberHandler+TBExtention.swift */; };
 		417AB0A62987C0500004B4E6 /* TBPOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A52987C0500004B4E6 /* TBPOP.swift */; };
 		417AB0A9298A41310004B4E6 /* HomeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A8298A41310004B4E6 /* HomeNavBar.swift */; };
 		417AB0AD298A47F50004B4E6 /* UIButton+PAITAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0AC298A47F50004B4E6 /* UIButton+PAITAdd.m */; };
@@ -125,6 +129,10 @@
 		41768A132992250E00091776 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		41768A15299227AC00091776 /* UIFont+TBExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+TBExtension.swift"; sourceTree = "<group>"; };
 		41768A1729922C5100091776 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
+		41768A19299238F400091776 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		41768A1B299255E000091776 /* Int+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+TBExtention.swift"; sourceTree = "<group>"; };
+		41768A1D299255EE00091776 /* Float+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+TBExtention.swift"; sourceTree = "<group>"; };
+		41768A1F2992569800091776 /* NSDecimalNumberHandler+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumberHandler+TBExtention.swift"; sourceTree = "<group>"; };
 		417AB0A52987C0500004B4E6 /* TBPOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPOP.swift; sourceTree = "<group>"; };
 		417AB0A8298A41310004B4E6 /* HomeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBar.swift; sourceTree = "<group>"; };
 		417AB0AB298A47F50004B4E6 /* UIButton+PAITAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+PAITAdd.h"; sourceTree = "<group>"; };
@@ -255,6 +263,7 @@
 				41768A0B2991F8D300091776 /* ApkVersion.swift */,
 				41768A0D2991F9CA00091776 /* AppLineCourseBanner.swift */,
 				41768A0F2991FB0500091776 /* Course.swift */,
+				41768A19299238F400091776 /* Job.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +303,9 @@
 				41C3F8E4298CFA5F008A5804 /* UICollectionView+TBExtionsion.swift */,
 				417689FD298E617500091776 /* UIStackView+TBExtention.swift */,
 				41768A15299227AC00091776 /* UIFont+TBExtension.swift */,
+				41768A1B299255E000091776 /* Int+TBExtention.swift */,
+				41768A1D299255EE00091776 /* Float+TBExtention.swift */,
+				41768A1F2992569800091776 /* NSDecimalNumberHandler+TBExtention.swift */,
 			);
 			path = Zpz;
 			sourceTree = "<group>";
@@ -568,6 +580,7 @@
 				417645BE298BC0A100F8F2A9 /* DateFormatter+TBExtension.swift in Sources */,
 				41C3F8E1298CF5E1008A5804 /* UITextField+TBExtension.swift in Sources */,
 				41126BF92985113900D3EF12 /* HomeController.swift in Sources */,
+				41768A202992569800091776 /* NSDecimalNumberHandler+TBExtention.swift in Sources */,
 				417645C4298BC4B000F8F2A9 /* Bundle+TBExtension.swift in Sources */,
 				41C3F8E3298CFA50008A5804 /* UITableView+TBExtention.swift in Sources */,
 				417645C0298BC22100F8F2A9 /* String+TBExtention.swift in Sources */,
@@ -579,7 +592,9 @@
 				41C3F8E5298CFA5F008A5804 /* UICollectionView+TBExtionsion.swift in Sources */,
 				417AB0B1298A5A040004B4E6 /* AppUtil.swift in Sources */,
 				417AB0B8298B57040004B4E6 /* R.generated.swift in Sources */,
+				41768A1A299238F400091776 /* Job.swift in Sources */,
 				41768A102991FB0500091776 /* Course.swift in Sources */,
+				41768A1C299255E000091776 /* Int+TBExtention.swift in Sources */,
 				417645D6298BCE4B00F8F2A9 /* TBAsyncs.swift in Sources */,
 				417689F8298D134C00091776 /* PLRefreshFooter.swift in Sources */,
 				41768A16299227AC00091776 /* UIFont+TBExtension.swift in Sources */,
@@ -601,6 +616,7 @@
 				41126BFB2985114C00D3EF12 /* StudyController.swift in Sources */,
 				417645C6298BC63500F8F2A9 /* Bool+TBExtention.swift in Sources */,
 				417AB0AD298A47F50004B4E6 /* UIButton+PAITAdd.m in Sources */,
+				41768A1E299255EE00091776 /* Float+TBExtention.swift in Sources */,
 				4195BA78296E8CB900ED842C /* AppDelegate.swift in Sources */,
 				417689FE298E617500091776 /* UIStackView+TBExtention.swift in Sources */,
 				41126BFF2985116700D3EF12 /* MineController.swift in Sources */,

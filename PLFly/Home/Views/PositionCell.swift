@@ -8,6 +8,8 @@
 import UIKit
 
 class PositionCell: UITableViewCell {
+    var job: Job?
+    
     private lazy var companyNameLabel = {
         return UILabel().font(14).color(UIColor(hexInt: 0x141418))
     }()
@@ -131,5 +133,15 @@ class PositionCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
+}
+
+extension PositionCell {
+    public func setJob(job: Job) {
+//        self.job = job
+        self.positionNameLabel.text = job.name
+        self.positionTypeLabel.text = (job.jobType == 1) ? "全职" : "实习"
+        self.positionSalaryLabel.text = job.price
+//        self.positionPostDateLabel.text = job.workTime
+//        self.companyLogoImageView.image = 
+    }
 }

@@ -24,10 +24,9 @@ typealias RequestCallback = ((ResponseModel) -> Void)
 typealias errorCallback = (() -> Void)
 
 /// dataKey一般是 "data"  这里用的知乎daily 的接口 为stories
-let responseDataKey = "stories"
-let responseMessageKey = "message"
-let responseCodeKey = "code"
-let successCode: Int = -999
+let responseMessageKey = "msg"
+let responseStateKey = "state"
+let responseEntityKey = "entity"
 
 /// 网络请求的基本设置,这里可以拿到是具体的哪个网络请求，可以在这里做一些设置
 private let myEndpointClosure = { (target: TargetType) -> Endpoint in
@@ -158,9 +157,9 @@ fileprivate let Provider = MoyaProvider<MultiTarget>(endpointClosure: myEndpoint
 ///   - failureCallback: 失败的回调
 /// - Returns: 取消当前网络请求Cancellable实例
 @discardableResult
-func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: T.Type, successCallback:@escaping RequestModelSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
+func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: T.Type, tagetMapKey: String = "", successCallback:@escaping RequestModelSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
 //    return NetWorkRequest(target, showFailAlert: showFailAlert, modelType: modelType, successCallback: successCallback, failureCallback: nil)
-    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, successCallback: { (responseModel) in
+    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, tagetMapKey: tagetMapKey, successCallback: { (responseModel) in
         
         if let model = T(JSONString: responseModel.dataString) {
             successCallback(model, responseModel)
@@ -180,8 +179,8 @@ func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool =
 ///   - failureCallback: 失败的回调
 /// - Returns: 取消当前网络请求Cancellable实例
 @discardableResult
-func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: [T].Type, successCallback:@escaping RequestModelsSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
-    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, successCallback: { (responseModel) in
+func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool = true, modelType: [T].Type, tagetMapKey: String = "", successCallback:@escaping RequestModelsSuccessCallback<T>, failureCallback: RequestCallback? = nil) -> Cancellable? {
+    return NetWorkRequest(target, needShowFailAlert: needShowFailAlert, tagetMapKey: tagetMapKey, successCallback: { (responseModel) in
         
         if let model = [T](JSONString: responseModel.dataString) {
             successCallback(model, responseModel)
@@ -201,7 +200,7 @@ func NetWorkRequest<T: Mappable>(_ target: TargetType, needShowFailAlert: Bool =
 ///   - failureCallback: 失败的回调
 /// - Returns: 取消当前网络请求Cancellable实例
 @discardableResult
-func NetWorkRequest(_ target: TargetType, needShowFailAlert: Bool = true, successCallback:@escaping RequestCallback, failureCallback: RequestCallback? = nil) -> Cancellable? {
+func NetWorkRequest(_ target: TargetType, needShowFailAlert: Bool = true, tagetMapKey: String = "", successCallback:@escaping RequestCallback, failureCallback: RequestCallback? = nil) -> Cancellable? {
     
     
     // 先判断网络是否有链接 没有的话直接返回--代码略
@@ -214,16 +213,6 @@ func NetWorkRequest(_ target: TargetType, needShowFailAlert: Bool = true, succes
         switch result {
         case let .success(response):
             do {
-//                if response.statusCode == 200, response.data.count != 0{
-//                // 响应成功
-//                    let jsonData = try JSON(data: response.data)
-//
-//
-//                } else {
-//                // 响应失败
-//
-//
-//                }
 //                print("返回结果是：\(response.data)")
 //                let jsonWithObjectRoot = try response.mapJSON()
 //                print("返回结果是：\(jsonWithObjectRoot)")
@@ -232,12 +221,20 @@ func NetWorkRequest(_ target: TargetType, needShowFailAlert: Bool = true, succes
                 if !validateRepsonse(response: jsonData.dictionary, needShowFailAlert: needShowFailAlert, failure: failureCallback) { return }
                 let respModel = ResponseModel()
                 /// 这里的 -999的code码 需要根据具体业务来设置
-//                respModel.code = jsonData[responseCodeKey].int ?? -999
-                respModel.code =  -999
-                respModel.message = jsonData[responseMessageKey].stringValue
-
-                if respModel.code == successCode {
+                respModel.status = jsonData[responseStateKey].stringValue
+            
+                if respModel.status.isEmpty {
                     respModel.dataString = jsonData.rawString() ?? ""
+                    successCallback(respModel)
+                    return
+                }
+                respModel.message = jsonData[responseMessageKey].stringValue
+                if respModel.status == "success" {
+                    if !tagetMapKey.isEmpty {
+                        respModel.dataString = jsonData[responseEntityKey][tagetMapKey].rawString() ?? ""
+                    } else {
+                        respModel.dataString = jsonData[responseEntityKey].rawString() ?? ""
+                    }
                     successCallback(respModel)
                 } else {
                     errorHandler(code: respModel.code , message: respModel.message , needShowFailAlert: needShowFailAlert, failure: failureCallback)
@@ -319,11 +316,10 @@ private func judgeCondition(_ flag: String?) {
 
 class ResponseModel {
     var code: Int = -999
+    var status: String = ""
     var message: String = ""
     // 这里的data用String类型 保存response.data
     var dataString: String = ""
-    /// 分页的游标 根据具体的业务选择是否添加这个属性
-    var cursor: String = ""
 }
 
 

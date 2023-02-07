@@ -44,13 +44,13 @@ class Course: Mappable {
     }
     
     var courseId: String = ""
-    var courseName: String?
+    var courseName: String = ""
     var courseIsPay: Bool?
     var courseCurrentprice: Float = 0.0
     var courseLogo: String?
-    var courseMobileLogo: String?
+    var courseMobileLogo: String = ""
     var courseKnum: Int = 0
-    var courseViewcount: Int = 0
+    var courseViewcount: String = ""
     var courseVommentcount: Int = 0
     var courseWatchpersoncount: Int = 0
     var courseMonthlyPay: String?
@@ -60,7 +60,7 @@ class Course: Mappable {
     var isPay: Bool?
     var sourceprice: Float?
     var losetype: Int?
-    var level: String?
+    var level: String = ""
     var crsid: Int?
     var isJoin: Int?
     var actFormId: Int?

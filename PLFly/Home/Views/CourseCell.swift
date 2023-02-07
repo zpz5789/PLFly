@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CourseCell: UITableViewCell {
 
@@ -106,5 +107,16 @@ class CourseCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+}
 
+extension CourseCell {
+    public func setCourse(course: Course?) {
+        courseImageView.kf.setImage(with: URL(string: TBImageBaseURL + course!.courseMobileLogo))
+        courseNameLabel.text = course!.courseName
+        let grade = course!.level + "." + String(course!.tnum)
+        courseGradeLabel.text = grade
+        watchPersonNumbersButton.setTitle(course!.courseViewcount, for: .normal)
+        coursePriceLabel.text = course!.courseCurrentprice.tb.string
+//        studyProgressLabel.text = course.yxnum
+    }
 }

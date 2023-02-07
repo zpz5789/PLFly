@@ -34,12 +34,12 @@ class HomeController: UIViewController {
         tableView.tb.register(cellClass: PositionCell.self)
         return tableView
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden(true)
         // 设置UI
         setupUI()
-        
         // 网络请求
         request()
     }
@@ -62,8 +62,14 @@ extension HomeController {
     }
     
     private func request() {
+
         NetWorkRequest(APIHome.newIndex(parameters: ["sctName":"深圳", "userId":"291952", "ctName":"深圳"]), modelType: HomeIndex.self) { homeIndex, _ in
             self.homeIndex = homeIndex
+            self.tableView.reloadData()
+        }
+        
+        NetWorkRequest(APIHome.job(parameters: ["sctName":"深圳", "userId":"291952", "ctName":"深圳", "currentPage":1, "pageSize": 10]), modelType: [Job].self, tagetMapKey: "jobs") { jobs, _ in
+            self.jobDataSource = jobs
             self.tableView.reloadData()
         }
     }
@@ -75,7 +81,6 @@ extension HomeController {
     @objc private func headerRefresh() {
         
     }
-
 }
 
 
@@ -118,16 +123,18 @@ extension HomeController: UITableViewDataSource {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 let adCell = tableView.tb.dequeueReusableCell(cellType: HomeAdCell.self, cellForRowAt: indexPath)
+                adCell.setAppLineCourseBannerList(list: self.homeIndex?.appLineCourseBannerList ?? [])
                 return adCell
             } else {
                 let courseCell = tableView.tb.dequeueReusableCell(cellType: CourseCell.self, cellForRowAt: indexPath)
+                courseCell.setCourse(course: self.homeIndex?.courseList?[indexPath.row - 1])
                 return courseCell
             }
         } else {
-//            let adCell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(HomeAdCell.self))
-            return UITableViewCell()
+            let jobCell = tableView.tb.dequeueReusableCell(cellType: PositionCell.self, cellForRowAt: indexPath)
+            let job = self.jobDataSource[indexPath.row] as! Job
+            jobCell.setJob(job: job)
+            return jobCell
         }
     }
-    
-    
 }
