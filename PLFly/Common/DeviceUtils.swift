@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct DeviceUtils {
     public static func keyWindow() -> UIWindow? {
