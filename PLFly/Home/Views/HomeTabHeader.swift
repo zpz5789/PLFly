@@ -33,7 +33,6 @@ class HomeTabHeader: UIView {
     
     private lazy var pageControl: FSPageControl = {
         let pageControl = FSPageControl(frame: CGRectMake(CGRectGetWidth(self.bannerView.frame)/2.0 - 40, CGRectGetMaxY(self.bannerView.frame) - 30, 100, 30))
-//        pageControl.backgroundColor = UIColor.lightGray
         pageControl.numberOfPages = self.bannerDataSource.count
         pageControl.contentHorizontalAlignment = .center
         pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
