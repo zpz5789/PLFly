@@ -54,8 +54,6 @@
 		41768A202992569800091776 /* NSDecimalNumberHandler+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41768A1F2992569800091776 /* NSDecimalNumberHandler+TBExtention.swift */; };
 		417AB0A62987C0500004B4E6 /* TBPOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A52987C0500004B4E6 /* TBPOP.swift */; };
 		417AB0A9298A41310004B4E6 /* HomeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0A8298A41310004B4E6 /* HomeNavBar.swift */; };
-		417AB0AF298A49CE0004B4E6 /* TBTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0AE298A49CE0004B4E6 /* TBTheme.swift */; };
-		417AB0B1298A5A040004B4E6 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0B0298A5A040004B4E6 /* AppUtil.swift */; };
 		417AB0B3298A5B2C0004B4E6 /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0B2298A5B2C0004B4E6 /* DeviceUtils.swift */; };
 		417AB0B5298A6E740004B4E6 /* UIButton+TBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0B4298A6E740004B4E6 /* UIButton+TBExtention.swift */; };
 		417AB0B8298B57040004B4E6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AB0B7298B57040004B4E6 /* R.generated.swift */; };
@@ -134,8 +132,6 @@
 		41768A1F2992569800091776 /* NSDecimalNumberHandler+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumberHandler+TBExtention.swift"; sourceTree = "<group>"; };
 		417AB0A52987C0500004B4E6 /* TBPOP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPOP.swift; sourceTree = "<group>"; };
 		417AB0A8298A41310004B4E6 /* HomeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBar.swift; sourceTree = "<group>"; };
-		417AB0AE298A49CE0004B4E6 /* TBTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTheme.swift; sourceTree = "<group>"; };
-		417AB0B0298A5A040004B4E6 /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
 		417AB0B2298A5B2C0004B4E6 /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		417AB0B4298A6E740004B4E6 /* UIButton+TBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TBExtention.swift"; sourceTree = "<group>"; };
 		417AB0B7298B57040004B4E6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -355,7 +351,6 @@
 				4195BA7B296E8CB900ED842C /* ViewController.swift */,
 				414AB3E729866E5C00A5E119 /* LoadMethod2 */,
 				414AB3E629866E4400A5E119 /* LoadMethod1 */,
-				4195BA91296EC9E200ED842C /* UIKitExtension */,
 				417AB0B7298B57040004B4E6 /* R.generated.swift */,
 				4195BA7D296E8CB900ED842C /* Main.storyboard */,
 				4195BA80296E8CB900ED842C /* Assets.xcassets */,
@@ -364,13 +359,6 @@
 				414AB3E029865CEC00A5E119 /* PLFly-Bridging-Header.h */,
 			);
 			path = PLFly;
-			sourceTree = "<group>";
-		};
-		4195BA91296EC9E200ED842C /* UIKitExtension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKitExtension;
 			sourceTree = "<group>";
 		};
 		41C8CF16298765CF00A0E3F2 /* Tabbar */ = {
@@ -386,8 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				41C8CF1829879DC200A0E3F2 /* Constants.swift */,
-				417AB0AE298A49CE0004B4E6 /* TBTheme.swift */,
-				417AB0B0298A5A040004B4E6 /* AppUtil.swift */,
 				417AB0B2298A5B2C0004B4E6 /* DeviceUtils.swift */,
 			);
 			path = Common;
@@ -572,12 +558,10 @@
 				41C3F8E3298CFA50008A5804 /* UITableView+TBExtention.swift in Sources */,
 				417645C0298BC22100F8F2A9 /* String+TBExtention.swift in Sources */,
 				417645C2298BC39900F8F2A9 /* TBRegexHelper.swift in Sources */,
-				417AB0AF298A49CE0004B4E6 /* TBTheme.swift in Sources */,
 				417AB0BA298B8D7E0004B4E6 /* UILabel+TBExtention.swift in Sources */,
 				41768A122992002700091776 /* HomeAdCell.swift in Sources */,
 				417AB0A62987C0500004B4E6 /* TBPOP.swift in Sources */,
 				41C3F8E5298CFA5F008A5804 /* UICollectionView+TBExtionsion.swift in Sources */,
-				417AB0B1298A5A040004B4E6 /* AppUtil.swift in Sources */,
 				417AB0B8298B57040004B4E6 /* R.generated.swift in Sources */,
 				41768A1A299238F400091776 /* Job.swift in Sources */,
 				41768A102991FB0500091776 /* Course.swift in Sources */,
