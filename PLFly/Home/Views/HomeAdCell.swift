@@ -49,17 +49,6 @@ class HomeAdCell: UITableViewCell {
    @objc private func tapClick(_ tap: UITapGestureRecognizer?) {
         print("image did click")
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 }
 
 extension HomeAdCell {
