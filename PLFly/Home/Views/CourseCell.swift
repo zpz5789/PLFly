@@ -96,17 +96,6 @@ class CourseCell: UITableViewCell {
             make.centerY.equalTo(coursePriceLabel)
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 }
 
 extension CourseCell {
@@ -117,6 +106,5 @@ extension CourseCell {
         courseGradeLabel.text = grade
         watchPersonNumbersButton.setTitle(course!.courseViewcount, for: .normal)
         coursePriceLabel.text = course!.courseCurrentprice.tb.string
-//        studyProgressLabel.text = course.yxnum
     }
 }
