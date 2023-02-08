@@ -55,7 +55,7 @@ class Course: Mappable {
     var courseWatchpersoncount: Int = 0
     var courseMonthlyPay: String?
     var isListen: Bool?
-    var gdu: String?
+    var gdu: String = ""
     var tnum: Int = 0
     var isPay: Bool?
     var sourceprice: Float?
