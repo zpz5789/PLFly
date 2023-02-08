@@ -24,7 +24,6 @@ class HomeController: UIViewController {
     
     private lazy var tableView: UITableView = {[weak self] in
         let tableView = UITableView(frame: CGRectZero, style: .plain)
-        //        tableView.backgroundColor = UIColor.lightGray
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tb.tableViewNeverAdjustContentInset()
